@@ -1,4 +1,4 @@
-import kairos_face as kf
+import main.enroll
 import pymysql
 
 kf.settings.app_id=""
@@ -15,4 +15,5 @@ result=cursor.fetchone()
 
 db.close()
 
-kf.enroll_face(file='face.jpg', subject_id=result[0] , gallery_name="student")
+# kf.enroll_face(file='face.jpg', subject_id=result[0] , gallery_name="student")
+enroll('face.jpg' , result[0] , "student")
